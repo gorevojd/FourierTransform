@@ -96,8 +96,8 @@ void DftInv(complex_num* out, complex_num* in, int count) {
 			float AngleCos = cosf(Angle);
 			float AngleSin = sinf(Angle);
 
-			xk.re += in[k].re * AngleCos + in[k].im * -AngleSin;
-			xk.im += in[k].re * AngleSin + in[k].im * AngleCos;
+			xk.re += in[n].re * AngleCos + in[n].im * -AngleSin;
+			xk.im += in[n].re * AngleSin + in[n].im * AngleCos;
 		}
 
 		out[k] = xk * InvCount;
@@ -107,7 +107,6 @@ void DftInv(complex_num* out, complex_num* in, int count) {
 void FFT(complex_num* in, complex_num* out, int count) {
 
 }
-
 
 int main(int ArgsCount, char** Args) {
 
